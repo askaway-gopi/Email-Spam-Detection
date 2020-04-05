@@ -13,7 +13,7 @@ def save(clf, name):
 
 
 def make_dict():
-    direc = "G:/projects/New folder/enron1/emails/"
+    direc = "emails/"
     files = os.listdir(direc)
     emails = [direc + email for email in files]
     words = []
@@ -69,4 +69,4 @@ clf.fit(x_train, y_train)
 
 preds = clf.predict(x_test)
 print (accuracy_score(y_test, preds))
-save(clf, "G:/projects/New folder/enron1/text-classifier.mdl")
+save(clf, "text-classifier.mdl")
